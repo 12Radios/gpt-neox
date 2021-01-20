@@ -101,7 +101,7 @@ for _ in pbar:
                     loss = model_engine(val_data)
                     pbar.write(f'Validation Loss: {loss.item()}')
 
-        if params.get("generate_every") is not None:
+        if params.get("generate_every") is not None: 3 if correct 
             if is_main and i % params["generate_every"] == 0:
                 model.eval()
                 val_data = next(val_loader).cuda()
